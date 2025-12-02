@@ -9,6 +9,13 @@ type Human struct {
 	Sex    bool
 }
 
+func (h *Human) Birthday() string {
+	return fmt.Sprintf("%d", h.Age)
+}
+
+func (h *Human) getHeight() string {
+	return fmt.Sprintf("%f", h.Height)
+}
 func main() {
 	var h Human
 	h = Human{
@@ -20,4 +27,6 @@ func main() {
 	fmt.Printf("%v\n", h)
 	fmt.Printf("%+v\n", h)
 	fmt.Printf("%#v\n", h)
+	fmt.Printf("%s\n", h.Birthday())
+	fmt.Printf("%s", h.getHeight())
 }
